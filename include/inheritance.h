@@ -14,7 +14,8 @@ public:
 
 	void printA() { std::cout << "A == " << _a << std::endl; }
 
-	//deve ser sobrecarregada
+	// deve ser virtual para sempre ser chamada na destruição de objeto derivado
+    // até mesmo quando referenciado por variavel base (sem o virtual,  neste caso não seria chamado)
 	virtual ~A() { std::cout << "Class A Destructor \n"; }
 
 };

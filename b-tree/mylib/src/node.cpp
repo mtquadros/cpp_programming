@@ -1,4 +1,4 @@
-#include "node.h"
+#include "../../include/node.h"
 #include <iostream>
 #include <string>
 
@@ -87,17 +87,4 @@ Node::~Node() {
 
 	if (_right != nullptr)
 		delete _right;
-}
-
-int main() {
-	Node *root = new Node(50);
-	std::vector<int> input{ 45,80,49,47,30,25,35 };
-	
-	for (auto elem : input)
-	{
-		root->insert(elem);
-	}
-
-
-	delete root;
 }
